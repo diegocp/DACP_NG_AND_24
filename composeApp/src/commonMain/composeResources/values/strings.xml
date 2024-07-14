@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">NGtv</string>
+    <string name="region_param">IRL</string>
+    <string name="top_rated">Top Rated</string>
+    <string name="popular">Popular Movies</string>
+    <string name="popular_interests">Popular interests</string>
+    <string name="latest_tv">Latest TV Shows</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="error_msg">Sorry, An error occurred</string>
+    <string name="more_info">More info</string>
+    <string name="photos">Photos</string>
+    <string name="people_like">People also like</string>
+    <string name="back">Back</string>
+    <string name="no_movie_found">No movie or tv show found.</string>
+    <string name="search">Search</string>
+    <string name="clear">Clear</string>
+    <string name="whattowatch">What to watch?</string>
+    <string name="whattowatch_try">Get a recommendation based on your prompt</string>
+
+</resources>

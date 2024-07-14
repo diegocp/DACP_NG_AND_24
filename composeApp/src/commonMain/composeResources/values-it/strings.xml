@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">NGtv</string>
+    <string name="region_param">IRL</string>
+    <string name="top_rated">Più Votati</string>
+    <string name="popular">Film Popolari</string>
+    <string name="popular_interests">Interessi Popolari</string>
+    <string name="latest_tv">Ultimi Programmi TV</string>
+    <string name="upcoming">Prossimamente</string>
+    <string name="error_msg">Spiacente, Si è Verificato un Errore</string>
+    <string name="more_info">Maggiori Informazioni</string>
+    <string name="photos">Foto</string>
+    <string name="people_like">Piace anche a</string>
+    <string name="back">Indietro</string>
+    <string name="no_movie_found">Nessun film o programma TV trovato.</string>
+    <string name="search">Cerca</string>
+    <string name="clear">Cancella</string>
+    <string name="whattowatch">What to watch?</string>
+    <string name="whattowatch_try">Get a recommendation based on your prompt</string>
+
+</resources>

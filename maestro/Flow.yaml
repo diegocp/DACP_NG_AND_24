@@ -1,0 +1,61 @@
+appId: com.ng.tv
+---
+- launchApp
+- tapOn:
+    point: "22%,37%"
+- swipe:
+    start: "52%,75%"
+    end: "52%,61%"
+    duration: 754
+- swipe:
+    start: "53%,70%"
+    end: "56%,15%"
+    duration: 384
+- swipe:
+    start: "48%,66%"
+    end: "41%,19%"
+    duration: 249
+- tapOn:
+    point: "11%,8%"
+- swipe:
+    start: "48%,76%"
+    end: "40%,20%"
+    duration: 754
+- swipe:
+    start: "48%,76%"
+    end: "30%,22%"
+    duration: 5633
+- tapOn:
+    point: "23%,10%"
+- swipe:
+    start: "46%,64%"
+    end: "49%,31%"
+    duration: 1179
+- swipe:
+    start: "44%,75%"
+    end: "39%,36%"
+    duration: 897
+- tapOn:
+    point: "64%,74%"
+- tapOn:
+    point: "12%,7%"
+- swipe:
+    start: "51%,13%"
+    end: "42%,77%"
+    duration: 792
+- swipe:
+    start: "46%,13%"
+    end: "44%,54%"
+    duration: 600
+- tapOn:
+    point: "91%,9%"
+- tapOn:
+    point: "46%,23%"
+- tapOn:
+    point: "33%,57%"
+- tapOn:
+    point: "12%,7%"
+- tapOn:
+    point: "40%,8%"
+- tapOn:
+    point: "51%,8%"
