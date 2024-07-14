@@ -55,8 +55,8 @@ The app is built using a stack:
 
 ### iOS
 <p align="center">
-  <img src="https://github.com/diegocp/DIEGOCP_NG_AND_24/blob/master/assets/home_light.webp" width="25%" />
-  <img src="https://github.com/diegocp/DIEGOCP_NG_AND_24/blob/master/assets/home_dark.webp" width="25%" />
+  <img src="https://github.com/diegocp/DIEGOCP_NG_AND_24/blob/master/assets/ios-home.webp" width="25%" />
+  <img src="https://github.com/diegocp/DIEGOCP_NG_AND_24/blob/master/assets/ios-detail.webp" width="25%" />
 </p>
 
 ### Foldable / Desktop  
