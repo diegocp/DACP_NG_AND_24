@@ -45,10 +45,7 @@ kotlin {
 
     sourceSets {
         all {
-            languageSettings{
-                optIn("kotlin.experimental.ExperimentalObjCName")
-                optIn("kotlinx.cinterop.ExperimentalForeignApi")
-            }
+            languageSettings.optIn("kotlinx.cinterop.ExperimentalForeignApi")
         }
 
         val desktopMain by getting
@@ -103,6 +100,7 @@ kotlin {
 
         appleMain.dependencies {
             implementation(libs.ktor.client.darwin)
+            implementation(libs.ktor.ios)
         }
 
     }

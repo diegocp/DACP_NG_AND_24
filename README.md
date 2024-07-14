@@ -5,7 +5,7 @@
 ## App Description
 
 NGtv is a comprehensive movie and TV show discovery app that brings the vast world of cinema and television to your fingertips. With an intuitive and user-friendly interface, users can explore a wide range of content . Here are the key features:
-This is a Kotlin Multiplatform project targeting Android, Desktop (iOS in progress).
+This is a Kotlin Multiplatform project targeting Android, Desktop and iOS.
 
 - **Discover Top Rated Movies and TV Shows**: Browse through lists of top-rated content, curated from global ratings.
 - **Explore Popular Movies**: Dive into a collection of movies that are currently popular among viewers.
@@ -47,17 +47,25 @@ The app is built using a stack:
  
 [Assets](https://github.com/diegocp/DIEGOCP_NG_AND_24/tree/master/assets) directory contains screenshots and videos of the app.
 
+### Android 
 <p align="center">
   <img src="https://github.com/diegocp/DIEGOCP_NG_AND_24/blob/master/assets/home_light.webp" width="25%" />
   <img src="https://github.com/diegocp/DIEGOCP_NG_AND_24/blob/master/assets/home_dark.webp" width="25%" />
 </p>
 
+### iOS
+<p align="center">
+  <img src="https://github.com/diegocp/DIEGOCP_NG_AND_24/blob/master/assets/home_light.webp" width="25%" />
+  <img src="https://github.com/diegocp/DIEGOCP_NG_AND_24/blob/master/assets/home_dark.webp" width="25%" />
+</p>
+
+### Foldable / Desktop  
 <p align="center">
   <img src="https://github.com/diegocp/DIEGOCP_NG_AND_24/blob/master/assets/foldable-light.png" width="25%" />
   <img src="https://github.com/diegocp/DIEGOCP_NG_AND_24/blob/master/assets/demo-desktop.webp" width="25%" />
 </p>
 
-## Building the Project
+## Building the Project 
 
 To build the project, follow these steps:
 
