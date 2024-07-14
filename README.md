@@ -1,6 +1,6 @@
 # NGtv
 
-<img src="https://github.com/diegocp/DACP_NG_AND_24/blob/master/assets/logo.webp">
+<img src="https://github.com/diegocp/DIEGOCP_NG_AND_24/blob/master/assets/logo.webp">
 
 ## App Description
 
@@ -45,16 +45,16 @@ The app is built using a stack:
 
 ## Screenshots and Videos
  
-[Assets](https://github.com/diegocp/DACP_NG_AND_24/tree/master/assets) directory contains screenshots and videos of the app.
+[Assets](https://github.com/diegocp/DIEGOCP_NG_AND_24/tree/master/assets) directory contains screenshots and videos of the app.
 
 <p align="center">
-  <img src="https://github.com/diegocp/DACP_NG_AND_24/blob/master/assets/home_light.webp" width="25%" />
-  <img src="https://github.com/diegocp/DACP_NG_AND_24/blob/master/assets/home_dark.webp" width="25%" />
+  <img src="https://github.com/diegocp/DIEGOCP_NG_AND_24/blob/master/assets/home_light.webp" width="25%" />
+  <img src="https://github.com/diegocp/DIEGOCP_NG_AND_24/blob/master/assets/home_dark.webp" width="25%" />
 </p>
 
 <p align="center">
-  <img src="https://github.com/diegocp/DACP_NG_AND_24/blob/master/assets/foldable-light.png" width="25%" />
-  <img src="https://github.com/diegocp/DACP_NG_AND_24/blob/master/assets/demo-desktop.webp" width="25%" />
+  <img src="https://github.com/diegocp/DIEGOCP_NG_AND_24/blob/master/assets/foldable-light.png" width="25%" />
+  <img src="https://github.com/diegocp/DIEGOCP_NG_AND_24/blob/master/assets/demo-desktop.webp" width="25%" />
 </p>
 
 ## Building the Project
@@ -72,7 +72,7 @@ To build the project, follow these steps:
     to:  GEMINI_API_KEY=<YOUR_GEMINI_KEY>
 
 - Maestro for UI testing.
-    - Maestro/Flow.yaml contains the test plan for the app. [Demo available here](https://github.com/diegocp/DACP_NG_AND_24/blob/master/assets/maestro-demo.mov)
+    - Maestro/Flow.yaml contains the test plan for the app. [Demo available here](https://github.com/diegocp/DIEGOCP_NG_AND_24/blob/master/assets/maestro-demo.mov)
     - See more about Maestro and how to run tests in the [Maestro documentation](https://maestro.mobile.dev/).
 
 * check support for KMP using kdoctor
