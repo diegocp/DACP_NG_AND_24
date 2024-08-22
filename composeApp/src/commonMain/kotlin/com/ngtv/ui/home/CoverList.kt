@@ -1,5 +1,7 @@
 package com.ngtv.ui.home
 
+import androidx.compose.foundation.gestures.Orientation
+import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.gestures.snapping.rememberSnapFlingBehavior
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -30,8 +32,14 @@ fun CoverList(
 
   val lazyListState = rememberLazyListState()
   LazyRow(
-    modifier = modifier,
     state = lazyListState,
+    userScrollEnabled = false,
+    modifier = Modifier
+      .scrollable(
+        orientation = Orientation.Horizontal,
+        reverseDirection = true,
+        state = lazyListState,
+      ),
     contentPadding = PaddingValues(horizontal = 8.dp),
     horizontalArrangement = Arrangement.spacedBy(8.dp),
     flingBehavior = rememberSnapFlingBehavior(lazyListState),

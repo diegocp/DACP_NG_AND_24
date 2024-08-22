@@ -1,15 +1,17 @@
 package com.ngtv.ui.search
 
+import androidx.compose.foundation.gestures.Orientation
+import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.Icon
@@ -57,6 +59,7 @@ fun Search(
   val genreViewModel = koinInject<GenreViewModel>()
   val genreUiState by genreViewModel.viewState.collectAsStateWithLifecycle()
   var genres by remember { mutableStateOf(emptyList<Genre>()) }
+  val listState = rememberLazyGridState()
 
   LaunchedEffect(Unit) {
     genreViewModel.fetchGenres()
@@ -118,7 +121,14 @@ fun Search(
         is SearchUiState.Success -> {
           Column(modifier = Modifier) {
             LazyVerticalGrid(
-              modifier = Modifier.fillMaxWidth(),
+              state = listState,
+              userScrollEnabled = false,
+              modifier = Modifier
+                .scrollable(
+                  orientation = Orientation.Vertical,
+                  reverseDirection = true,
+                  state = listState,
+                ),
               columns = GridCells.Fixed(1),
               verticalArrangement = Arrangement.spacedBy(16.dp),
               horizontalArrangement = Arrangement.spacedBy(16.dp),
@@ -183,6 +193,7 @@ fun FilterChip(
   genres: List<Genre>,
   onItemClicked: (String) -> Unit
 ) {
+  val listState = rememberLazyGridState()
   ScrollableTabRow(
     selectedTabIndex = 0,
     containerColor = Color.Transparent,
@@ -190,6 +201,11 @@ fun FilterChip(
     edgePadding = 16.dp,
     indicator = emptyTabIndicator,
     modifier = Modifier
+      .scrollable(
+        orientation = Orientation.Vertical,
+        reverseDirection = true,
+        state = listState,
+      )
   ) {
     genres.forEach {
       ChoiceChip(

@@ -1,5 +1,7 @@
 package com.ngtv.ui.detail
 
+import androidx.compose.foundation.gestures.Orientation
+import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -11,6 +13,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Card
@@ -36,6 +39,8 @@ fun PeopleAlsoLikeSection(
   movieDetail: MovieDetails,
   onDetailMovieClick: (String) -> Unit
 ) {
+  val listState = rememberLazyListState()
+
   Column(Modifier.padding(vertical = 16.dp)) {
     Text(
       text = stringResource(Res.string.people_like),
@@ -45,6 +50,14 @@ fun PeopleAlsoLikeSection(
     val recommendations = movieDetail.recommendations?.results ?: emptyList()
     Spacer(Modifier.height(16.dp))
     LazyRow(
+      state = listState,
+      userScrollEnabled = false,
+      modifier = Modifier
+        .scrollable(
+          orientation = Orientation.Horizontal,
+          reverseDirection = true,
+          state = listState,
+        ),
       horizontalArrangement = Arrangement.spacedBy(8.dp),
       contentPadding = PaddingValues(horizontal = 16.dp)
     ) {

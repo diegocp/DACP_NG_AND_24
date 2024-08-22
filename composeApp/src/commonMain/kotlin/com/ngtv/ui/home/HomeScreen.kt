@@ -1,6 +1,10 @@
 package com.ngtv.ui.home
 
 import NGtv.composeApp.BuildConfig
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.background
+import androidx.compose.foundation.gestures.Orientation
+import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -10,6 +14,7 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
@@ -36,7 +41,9 @@ import ngtv.composeapp.generated.resources.upcoming
 import ngtv.composeapp.generated.resources.whattowatch
 import org.jetbrains.compose.resources.stringResource
 
-@OptIn(ExperimentalMaterial3WindowSizeClassApi::class, ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3WindowSizeClassApi::class, ExperimentalMaterial3Api::class,
+  ExperimentalFoundationApi::class
+)
 @Composable
 fun HomeScreen(
   topRated: List<Movie>,
@@ -54,6 +61,8 @@ fun HomeScreen(
     WindowWidthSizeClass.Expanded -> 4
     else -> 4
   }
+
+  val listState = rememberLazyGridState()
 
   val scrollBehavior: TopAppBarScrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior(
     rememberTopAppBarState()
@@ -75,7 +84,15 @@ fun HomeScreen(
   ) {
 
     LazyVerticalGrid(
-      modifier = Modifier.fillMaxWidth(),
+      state = listState,
+      userScrollEnabled = false,
+      modifier = Modifier
+        .scrollable(
+          orientation = Orientation.Vertical,
+          reverseDirection = true,
+          state = listState,
+        )
+        .background(MaterialTheme.colorScheme.surface),
       columns = GridCells.Fixed(columns),
       verticalArrangement = Arrangement.spacedBy(16.dp),
       horizontalArrangement = Arrangement.spacedBy(16.dp),

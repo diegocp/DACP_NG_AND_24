@@ -1,5 +1,7 @@
 package com.ngtv.ui.detail
 
+import androidx.compose.foundation.gestures.Orientation
+import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -83,7 +85,14 @@ fun MovieDetailLayout(
 
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.TopCenter) {
       LazyColumn(
-        state = listState
+        state = listState,
+        userScrollEnabled = false,
+        modifier = Modifier
+          .scrollable(
+            orientation = Orientation.Vertical,
+            reverseDirection = true,
+            state = listState,
+          )
       ) {
         item { HeaderSection(movieDetail) }
         item { HorizontalDivider() }
