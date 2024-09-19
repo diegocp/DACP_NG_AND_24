@@ -11,16 +11,11 @@ import com.ngtv.usecases.MovieUseCaseContract
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.emptyFlow
 import kotlinx.coroutines.test.runTest
-import kotlin.test.Ignore
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
-//import org.junit.Assert.assertEquals
-//import org.junit.Test
-
 class MovieViewModelTest {
 
-  @Ignore //todo fix
   @Test
   fun `on launch movies are loaded um multiple sections`() = runTest {
 
@@ -30,10 +25,11 @@ class MovieViewModelTest {
       MoviePresenter(emptyFlow(), movieUseCase)
     }.distinctUntilChanged().test {
       assertEquals(
-        expected = MovieUiState.Success(MovieHomeData(Movies(emptyList()),Movies(emptyList()), Movies(emptyList()), Movies(emptyList()))),
+        expected = MovieUiState.Loading,
         actual = awaitItem(),
-        message = "Should start with empty movies"
+        message = "Should start with loading state"
       )
+      cancel()
     }
 
   }

@@ -1,6 +1,6 @@
-
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -42,17 +42,19 @@ fun App(darkTheme: Boolean = isSystemInDarkTheme()) {
     colorScheme = colorScheme,
     typography = AppTypography,
     content = {
-      when (movieUiState) {
-        is MovieUiState.Error -> Error()
-        MovieUiState.Loading -> Loading()
-        is MovieUiState.Success -> {
-          val data = (movieUiState as MovieUiState.Success).movies
-          Navigation(
-            data.topRated.results,
-            data.popular.results,
-            data.latestTv.results,
-            data.upcoming.results
-          )
+      Surface {
+        when (movieUiState) {
+          is MovieUiState.Error -> Error()
+          MovieUiState.Loading -> Loading()
+          is MovieUiState.Success -> {
+            val data = (movieUiState as MovieUiState.Success).movies
+            Navigation(
+              data.topRated.results,
+              data.popular.results,
+              data.latestTv.results,
+              data.upcoming.results
+            )
+          }
         }
       }
     }
@@ -110,7 +112,7 @@ fun Navigation(
       )
     }
 
-    composable<Screens.WhatToWatch>{
+    composable<Screens.WhatToWatch> {
       WhatToWatch(
         onBackPressed = {
           navController.popBackStack()

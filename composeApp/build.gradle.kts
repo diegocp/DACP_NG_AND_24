@@ -138,6 +138,9 @@ android {
     buildFeatures {
         compose = true
     }
+    testOptions {
+        unitTests.isReturnDefaultValues = true
+    }
     dependencies {
         debugImplementation(libs.compose.ui.tooling)
         testImplementation(libs.junit)
